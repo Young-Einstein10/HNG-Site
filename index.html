@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Open sans", Arial, Helvetica, sans-serif;
+            
+        }
+
+        .desktop-only {
+            display: none;
+        }
+        #corner-circle{
+            float:right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            /*height: 100%;*/
+            width:55%;
+            
+            z-index: -1;
+        }
+        .containerGrid{
+            display: grid;
+            margin: 0 10%;
+            margin-top: 2%;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "header"
+                "main";
+        }
+    
+        header{
+            grid-area: header;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        logo-container{
+            
+            height: 100%;
+        }
+        #logo{
+            
+            height: 100%;
+            width: 90%;
+        }
+        .hamburger-container{
+            
+        }
+        #hamburger{
+            float:right;
+            height: 50px;
+            width: 50px;
+            margin: auto 0;
+        }
+        main{
+            grid-area: main;
+            display: grid;
+            
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "row1"
+                "row2"
+                "row3";
+        }
+        .main-first-row{
+            grid-area: row1;
+            display: flex;
+            justify-content: center
+            
+        }
+        .main-second-row{
+            grid-area: row2;
+            display: flex;
+        }
+        .main-third-row{
+            grid-area: row3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #welcome-text{
+            text-align: center;
+            margin: 1em 0;
+        }
+        .cta-button{
+            display: block;
+            margin: 2.5em auto;
+            padding: 1em 2.5em;
+            box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            border: 0;
+            
+        }
+
+        .button--midBlue{
+            background: #00AEFF;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img src="cornerCircle.svg" id = "corner-circle" alt="Graphic at the top right corner">
+    <div class="containerGrid">
+        <header id="header">
+            <nav>
+                <div class="logo-container">
+                    <img src="logo.svg" alt="HNG Internship Logo" id="logo">
+                </div>
+                <div class="hamburger-container">
+                    <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M2 17c0 .55.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1zm0-5c0 .55.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1zm0-5c0 .55.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1z" />
+                    </svg>
+                </div>
+                <ul class="nav-ul desktop-only">
+                    <li class="nav-list"><a href="#">Home</a></li>
+                    <li class="nav-list"><a href="#">HNG6</a></li>
+                    <li class="nav-list"><a href="#">Mentors</a></li>
+                    <li class="nav-list"><a href="#">Contact</a></li>
+                    <li class="nav-list"><button><a href="#">Join HNG</a></button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-first-row">
+                <div class="welcome-column">
+                    <h1 id = "welcome-text">
+                        Welcome to <br> HNG 7.0 Internship
+                    </h1>
+                    <p>
+                        The HNG Internship is an ambitious attempt to change the way education is done in Africa. It’s
+                        the bridge between learning to code, and becoming the best in the world.
+                    </p>
+                    <button class="cta-button button--midBlue">
+                        Get Started
+                    </button>
+                </div>
+                <div class="image-column desktop-only">
+                    <img src="circles.png" alt="">
+                </div>
+            </div>
+
+            <div class="main-second-row">
+                <div class="countdown">
+                    <h3 class="countdown__heading">
+                        Countdown to HNG 7.0
+                    </h3>
+                    <div id="countdown-circles-container">
+                        <div class="countdown__item">
+                            <p id="days">05</p>
+                            <p>DAYS</p>
+                        </div>
+                        <div class="countdown__item">
+                            <p id="hours">23</p>
+                            <p>HOURS</p>
+                        </div>
+                        <div class="countdown__item">
+                            <p id="minutes">52</p>
+                            <p>MINUTES</p>
+                        </div>
+                        <div class="countdown__item">
+                            <p id="seconds">41</p>
+                            <p>SECONDS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-third-row">
+                <div class="subheading">
+                    <h3>
+                        Unleash Your Creativity
+                    </h3>
+                </div>
+                <div class="card-container">
+                    <div class="card desktop-only">
+                        <img src="card-image-1.jpg" alt="">
+                        <h5 class="card-heading">Remote Learning</h5>
+                        <p class="card-text">
+                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.
+                        </p>
+                    </div>
+                    <div class="card desktop-only">
+                        <img src="card-image-2.jpg" alt="">
+                        <h5 class="card-heading">Collaborate with Creatives</h5>
+                        <p class="card-text">
+                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. 
+                        </p>
+                    </div>
+                    <div class="card desktop-only">
+                        <img src="card-image-3.jpg" alt="">
+                        <h5 class="card-heading">Build Portfolio</h5>
+                        <p class="card-text">
+                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+    </div>
+
+</body>
+
+</html>
