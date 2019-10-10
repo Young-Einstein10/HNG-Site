@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The HNG Internship</title>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=Oswald');
+
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +37,7 @@
 
         .containerGrid {
             display: grid;
-            
+
             margin-top: 2%;
             grid-template-columns: 1fr;
             grid-template-areas:
@@ -65,7 +66,30 @@
             width: 90%;
         }
 
-        .hamburger-container {}
+        .nav-link {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 0.95em;
+            color: #474747;
+            mix-blend-mode: normal;
+            opacity: 0.95;
+        }
+
+        #join-hng {
+            margin: 0;
+            padding: 0.5em 1em;
+        }
+
+        #join-hng a {
+            color: #fff;
+            font-weight: 500;
+            
+        }
 
         #hamburger {
             float: right;
@@ -85,8 +109,8 @@
                 "row2"
                 "row3";
         }
-        
-        main > div{
+
+        main>div {
             padding: 0 10%;
         }
 
@@ -108,7 +132,7 @@
             display: flex;
             flex-direction: column;
             background: rgba(196, 196, 196, 0.1);
-            padding: 2em 2em;
+            padding-top: 2em;
         }
 
         #welcome-text {
@@ -120,7 +144,7 @@
             text-align: center;
             letter-spacing: 0.07em;
             color: #333333;
-            font-size:0.95em;
+            font-size: 0.95em;
         }
 
         .cta-button {
@@ -151,14 +175,12 @@
             justify-content: space-between;
         }
 
-        .countdown__heading {
-            text-align: center;
-        }
-
         
 
+
+
         .countdown__number {
-            
+
             font-style: normal;
             font-weight: 500;
             text-align: center;
@@ -166,35 +188,139 @@
             border: 5px solid #06F4CC;
             border-radius: 50%;
             padding: 0.2em 0.5em;
-            margin-bottom: 0.5em;   
+            margin-bottom: 0.5em;
         }
-        .countdown__subText{
+
+        .countdown__subText {
             color: #676767;
             font-weight: 500;
         }
-        .text_center{
+
+        .text_center {
             text-align: center;
         }
-        .card-image{
-            
+
+        .card-image {
+
             max-width: 100%;
             display: block;
-            height:auto;
+            height: auto;
             margin: 0 auto;
         }
-        .card-container{
+
+        .card-container {
             margin: 2em 0;
+            display: flex;
+        
         }
-        .card-heading{
+
+        .card-heading {
             margin: 1em 0;
             font-size: 1.05em;
         }
-        .card-text{
+
+        .card-text {
             font-size: 0.95em;
             color: #333333;
         }
-        .text__dark-blue{
-            color:#084482;
+
+        .text__dark-blue {
+            color: #084482;
+        }
+
+        /*Tablets*/
+        @media only screen and (min-width: 768px) {
+            .cta-button {
+                font-size: 1.15em;
+            }
+
+            .subheading {
+                font-size: 1.4em;
+            }
+
+            .card-heading {
+                font-size: 1.2em;
+            }
+
+            .card-text {
+                font-size: 1.05em;
+            }
+
+            #welcome-story {
+                font-size: 1.2em;
+            }
+        }
+
+        /*Desktop*/
+        @media only screen and (min-width: 960px) {
+            header {
+            
+            padding: 0 8%;
+        }
+            main>div {
+            padding: 0 8%;
+        }
+            .desktop-only {
+                display: block;
+            }
+
+            main {
+                margin-top: 3em;
+            }
+
+            #circles {
+                max-width: 100%;
+                display: block;
+                height: auto;
+            }
+
+            .welcome-column {
+                text-align: left;
+            }
+
+            .hamburger-container {
+                display: none;
+            }
+
+            .cta-button {
+                padding: 0.8em 2em;
+                margin: 2.5em 0;
+            }
+
+            .subheading {
+                font-size: 1.4em;
+            }
+
+            .card-heading {
+                font-size: 1.2em;
+            }
+
+            .card-text {
+                font-size: 1.05em;
+            }
+
+            #welcome-text {
+                text-align: left;
+            }
+
+            #welcome-story {
+                text-align: left;
+                font-size: 1em;
+                padding-right: 11em;
+            }
+            .countdown__heading{
+                text-align: left;
+            }
+            #countdown-circles-container{
+                justify-content: flex-start;
+            }
+            .countdown__item{
+                margin-right: 1em;
+            }
+            .card{
+                margin-right: 1em;
+            }
+
         }
     </style>
 </head>
@@ -215,18 +341,19 @@
                     </svg>
                 </div>
                 <ul class="nav-ul desktop-only">
-                    <li class="nav-list"><a href="#">Home</a></li>
-                    <li class="nav-list"><a href="#">HNG6</a></li>
-                    <li class="nav-list"><a href="#">Mentors</a></li>
-                    <li class="nav-list"><a href="#">Contact</a></li>
-                    <li class="nav-list"><button><a href="#">Join HNG</a></button></li>
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="#">HNG6</a></li>
+                    <li class="nav-link"><a href="#">Mentors</a></li>
+                    <li class="nav-link"><a href="#">Contact</a></li>
+                    <li class="nav-link"><button class="cta-button button--midBlue" id="join-hng"><a href="#">Join
+                                HNG</a></button></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="main-first-row">
                 <div class="welcome-column">
-                    <h1 id="welcome-text" class = "text__dark-blue">
+                    <h1 id="welcome-text" class="text__dark-blue">
                         Welcome to <br> HNG 7.0 Internship
                     </h1>
                     <p id="welcome-story">
@@ -238,44 +365,44 @@
                     </button>
                 </div>
                 <div class="image-column desktop-only">
-                    <img src="circles.png" alt="">
+                    <img id="circles" src="circles.png" alt="">
                 </div>
             </div>
 
             <div class="main-second-row countdown">
-                <h3 class="countdown__heading">
+                <h3 class="countdown__heading text_center">
                     Countdown to HNG 7.0
                 </h3>
                 <div id="countdown-circles-container">
                     <div class="countdown__item">
                         <p class="countdown__number" id="days">05</p>
-                        <p class = "text_center countdown__subText">DAYS</p>
+                        <p class="text_center countdown__subText">DAYS</p>
                     </div>
                     <div class="countdown__item">
                         <p class="countdown__number" id="hours">23</p>
-                        <p class = "text_center countdown__subText">HOURS</p>
+                        <p class="text_center countdown__subText">HOURS</p>
                     </div>
                     <div class="countdown__item">
                         <p class="countdown__number" id="minutes">52</p>
-                        <p class = "text_center countdown__subText">MINUTES</p>
+                        <p class="text_center countdown__subText">MINUTES</p>
                     </div>
                     <div class="countdown__item">
                         <p class="countdown__number" id="seconds">41</p>
-                        <p class = "text_center countdown__subText">SECONDS</p>
+                        <p class="text_center countdown__subText">SECONDS</p>
                     </div>
                 </div>
 
             </div>
 
             <div class="main-third-row text_center">
-                <div class="subheading text__dark-blue">
-                    <h3>
+                <div class="">
+                    <h3 class="subheading text__dark-blue">
                         Unleash Your Creativity
                     </h3>
                 </div>
                 <div class="card-container">
                     <div class="card">
-                        <img class = "card-image" src="card-image-1.jpg" alt="">
+                        <img class="card-image" src="card-image-1.jpg" alt="">
                         <h5 class="card-heading text__dark-blue">Remote Learning</h5>
                         <p class="card-text">
                             The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -283,15 +410,15 @@
                         </p>
                     </div>
                     <div class="card desktop-only">
-                        <img class = "card-image" src="card-image-2.jpg" alt="">
+                        <img class="card-image" src="card-image-2.jpg" alt="">
                         <h5 class="card-heading text__dark-blue">Collaborate with Creatives</h5>
                         <p class="card-text">
                             The HNG internship is a 3-month remote internship designed to find and develop the most
                             talented software developers.
                         </p>
                     </div>
-                    <div class="card desktop-only">
-                        <img class = "card-image" src="card-image-3.jpg" alt="">
+                    <div class="card desktop-only" style = "margin-right: 0">
+                        <img class="card-image" src="card-image-3.jpg" alt="">
                         <h5 class="card-heading text__dark-blue">Build Portfolio</h5>
                         <p class="card-text">
                             The HNG internship is a 3-month remote internship designed to find and develop the most
