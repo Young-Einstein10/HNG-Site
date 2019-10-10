@@ -53,6 +53,7 @@
         nav {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         logo-container {
@@ -69,7 +70,7 @@
         .nav-link {
             list-style-type: none;
             display: inline-block;
-            margin-left: 1em;
+            margin-left: 2em;
         }
 
         nav a {
@@ -88,13 +89,16 @@
         #join-hng a {
             color: #fff;
             font-weight: 500;
-            
+
+        }
+
+        a:hover {
+            font-weight: bold;
         }
 
         #hamburger {
             float: right;
-            height: 50px;
-            width: 50px;
+            cursor: pointer;
             margin: auto 0;
         }
 
@@ -175,10 +179,6 @@
             justify-content: space-between;
         }
 
-        
-
-
-
         .countdown__number {
 
             font-style: normal;
@@ -211,7 +211,7 @@
         .card-container {
             margin: 2em 0;
             display: flex;
-        
+
         }
 
         .card-heading {
@@ -221,12 +221,56 @@
 
         .card-text {
             font-size: 0.95em;
+            letter-spacing: 0.05em;
             color: #333333;
         }
 
         .text__dark-blue {
             color: #084482;
         }
+
+        aside {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            background: #CCF5FC;
+            height: 100%;
+            width: 35%;
+            padding: 5em 2em;
+            text-align: right;
+        }
+
+        aside>nav {
+            justify-content: flex-end;
+        }
+
+        .nav-link-vertical {
+            list-style-type: none;
+            margin-bottom: 2em;
+
+        }
+
+        aside a {
+            text-transform: uppercase;
+        }
+
+        .show {
+            display: none;
+        }
+
+        .hide-aside {
+            font-size: 2em;
+            position: absolute;
+            top: 0.2em;
+            right: 0.3em;
+            cursor: pointer;
+        }
+
+
+        /*#join-hng-text{
+            color: #fff;
+        }*/
 
         /*Tablets*/
         @media only screen and (min-width: 768px) {
@@ -254,12 +298,14 @@
         /*Desktop*/
         @media only screen and (min-width: 960px) {
             header {
-            
-            padding: 0 8%;
-        }
+
+                padding: 0 8%;
+            }
+
             main>div {
-            padding: 0 8%;
-        }
+                padding: 0 8%;
+            }
+
             .desktop-only {
                 display: block;
             }
@@ -307,17 +353,22 @@
                 text-align: left;
                 font-size: 1em;
                 padding-right: 11em;
+                letter-spacing: 0.1em;
             }
-            .countdown__heading{
+
+            .countdown__heading {
                 text-align: left;
             }
-            #countdown-circles-container{
+
+            #countdown-circles-container {
                 justify-content: flex-start;
             }
-            .countdown__item{
+
+            .countdown__item {
                 margin-right: 1em;
             }
-            .card{
+
+            .card {
                 margin-right: 1em;
             }
 
@@ -326,19 +377,15 @@
 </head>
 
 <body>
-    <img src="cornerCircle.svg" id="corner-circle" alt="Graphic at the top right corner">
+    <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
         <header id="header">
             <nav>
                 <div class="logo-container">
-                    <img src="logo.svg" alt="HNG Internship Logo" id="logo">
+                    <img src="https://bit.ly/2M2pUlV" alt="HNG Internship Logo" id="logo">
                 </div>
                 <div class="hamburger-container">
-                    <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M0 0h24v24H0V0z" />
-                        <path
-                            d="M2 17c0 .55.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1zm0-5c0 .55.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1zm0-5c0 .55.45 1 1 1h18c.55 0 1-.45 1-1s-.45-1-1-1H3c-.55 0-1 .45-1 1z" />
-                    </svg>
+                    <img src="https://bit.ly/2OHfmKZ" id="hamburger" alt="" width="35" height = "35">
                 </div>
                 <ul class="nav-ul desktop-only">
                     <li class="nav-link"><a href="#">Home</a></li>
@@ -350,6 +397,7 @@
                 </ul>
             </nav>
         </header>
+
         <main>
             <div class="main-first-row">
                 <div class="welcome-column">
@@ -365,7 +413,7 @@
                     </button>
                 </div>
                 <div class="image-column desktop-only">
-                    <img id="circles" src="circles.png" alt="">
+                    <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
                 </div>
             </div>
 
@@ -402,23 +450,23 @@
                 </div>
                 <div class="card-container">
                     <div class="card">
-                        <img class="card-image" src="card-image-1.jpg" alt="">
+                        <img class="card-image" src="https://bit.ly/33gP99W" alt="">
                         <h5 class="card-heading text__dark-blue">Remote Learning</h5>
                         <p class="card-text">
                             The HNG internship is a 3-month remote internship designed to find and develop the most
                             talented software developers.
                         </p>
                     </div>
-                    <div class="card desktop-only">
-                        <img class="card-image" src="card-image-2.jpg" alt="">
+                    <div class="card">
+                        <img class="card-image" src="https://bit.ly/2IAGSFN" alt="">
                         <h5 class="card-heading text__dark-blue">Collaborate with Creatives</h5>
                         <p class="card-text">
                             The HNG internship is a 3-month remote internship designed to find and develop the most
                             talented software developers.
                         </p>
                     </div>
-                    <div class="card desktop-only" style = "margin-right: 0">
-                        <img class="card-image" src="card-image-3.jpg" alt="">
+                    <div class="card" style="margin-right: 0">
+                        <img class="card-image" src="https://bit.ly/2Vug2Vf" alt="">
                         <h5 class="card-heading text__dark-blue">Build Portfolio</h5>
                         <p class="card-text">
                             The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -431,8 +479,75 @@
         </main>
 
 
+
+
     </div>
+    <aside class="show">
+        <div class="hide-aside text__dark-blue">
+            &times;
+        </div>
+        <nav>
+            <ul>
+                <li class="nav-link-vertical"><a href="#">Home</a></li>
+                <li class="nav-link-vertical"><a href="#">HNG6</a></li>
+                <li class="nav-link-vertical"><a href="#">Mentors</a></li>
+                <li class="nav-link-vertical"><a href="#">Contact</a></li>
+                <li class="nav-link"><a href="#" class="text__dark-blue">Join HNG</a></li>
+
+            </ul>
+        </nav>
+    </aside>
 
 </body>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const aside = document.getElementsByTagName("aside")[0];
+    const hide_aside = document.getElementsByClassName("hide-aside")[0];
+    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let slideIndex = 0;
+
+    showSlides(mediaQuery);
+    mediaQuery.addListener(showSlides);
+
+
+    //const cards = document.getElementsByClassName("card");
+    window.onload = () => {
+        hamburger.addEventListener("click", () => {
+            aside.classList.toggle("show");
+        });
+        hide_aside.addEventListener("click", () => {
+            aside.classList.toggle("show");;
+        });
+    }
+    function showSlides(mediaQueryx) {
+        let i;
+
+        let cards = document.getElementsByClassName("card");
+        if (mediaQuery.matches) {
+            
+            //var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > cards.length) { slideIndex = 1 }
+            
+            cards[slideIndex - 1].style.display = "block";
+            //dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);// Change image every 2 seconds*/
+        }
+        else{
+            for (i = 0; i < cards.length; i++) {
+                cards[i].style.display = "block";
+            }
+
+        }
+        
+
+    }
+
+
+</script>
 
 </html>
